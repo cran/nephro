@@ -4,9 +4,7 @@
 \description{
 GFR estimation using the 3rd formula proposed by Stevens et al. (Am J Kidney Dis 2008), which combines creatinine and cystatin C
 }
-\usage{
-Stevens.creat.cys(creatinine, cystatin, sex, age, ethnicity)
-}
+\usage{Stevens.creat.cys(creatinine, cystatin, sex, age, ethnicity)}
 \arguments{
   \item{creatinine}{Numeric vector with serum or plasma creatinine values in mg/dl}
   \item{cystatin}{Numeric vector with serum or plasma cystatin C values in mg/dl}
@@ -18,15 +16,13 @@ Stevens.creat.cys(creatinine, cystatin, sex, age, ethnicity)
 The function returns a numeric vector with eGFR values in ml/min/1.73 \eqn{m^2}.
 }
 \references{
-Stevens LA, \emph{et al}. Estimating GFR using serum cystatin C alone and in combination with serum creatinine: a pooled analysis of 3,418 individuals with CKD. \emph{Am J Kidney Dis} 2008;\strong{51}:395-406. 
+Stevens LA, \emph{et al}. Estimating GFR using serum cystatin C alone and in combination with serum creatinine: a pooled analysis of 3,418 individuals with CKD. \emph{Am J Kidney Dis} 2008; \strong{51}: 395-406. 
 }
-\author{
-Cristian Pattaro
-}
+\author{Cristian Pattaro}
 
 \seealso{
 \code{\link{CKDEpi.creat.cys}}
 }
-\keyword{ ~GFR }
-\keyword{ ~creatinine }
-\keyword{ ~cystatin }
+\keyword{ GFR }
+\keyword{ creatinine }
+\keyword{ cystatin }

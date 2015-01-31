@@ -1,0 +1,5 @@
+2015-01-31  Cristian Pattaro <cristian.pattaro@eurac.edu>
+
+* all functions: a serious bug on NA values has been fixed - many thanks to Max Plisckhe (Medical University of Vienna) who uncovered that!
+
+* CG(): new Cockroft and Gault creatinine clearance estimation function added

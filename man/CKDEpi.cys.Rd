@@ -1,8 +1,6 @@
 \name{CKDEpi.cys}
 \alias{CKDEpi.cys}
-\title{
-CKD-EPI equation for cystatin C
-}
+\title{CKD-EPI equation for cystatin C}
 \description{
 GFR is estimated with the CKD-EPI equation for cystatin C proposed by Inker et al., N Engl J Med 2012
 }
@@ -18,7 +16,7 @@ CKDEpi.cys(cystatin, sex, age)
 The function returns a numeric vector with eGFR values in ml/min/1.73 \eqn{m^2}.
 }
 \references{
-   Inker LA, \emph{et al}. Estimating glomerular filtration rate from serum creatinine and cystatin C. \emph{N Engl J Med} 2012;\strong{367}:20-29.
+   Inker LA, \emph{et al}. Estimating glomerular filtration rate from serum creatinine and cystatin C. \emph{N Engl J Med} 2012; \strong{367}: 20-29.
 }
 \author{
 Cristian Pattaro
@@ -27,7 +25,7 @@ Cristian Pattaro
 \seealso{
 \code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}
 }
-\keyword{ ~GFR }
-\keyword{ ~CKD-EPI }
-\keyword{ ~creatinine }
-\keyword{ ~cystatin }
+\keyword{ GFR }
+\keyword{ CKD-EPI }
+\keyword{ creatinine }
+\keyword{ cystatin }

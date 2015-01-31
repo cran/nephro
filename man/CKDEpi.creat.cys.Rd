@@ -20,15 +20,12 @@ CKDEpi.creat.cys(creatinine, cystatin, sex, age, ethnicity)
 A numeric vector with eGFR values in ml/min/1.73 \eqn{m^2}.
 }
 \references{
-   Inker LA, \emph{et al}. Estimating glomerular filtration rate from serum creatinine and cystatin C. \emph{N Engl J Med} 2012;\strong{367}:20-29.
-}
-\author{
-Cristian Pattaro
-}
+   Inker LA, \emph{et al}. Estimating glomerular filtration rate from serum creatinine and cystatin C. \emph{N Engl J Med} 2012; \strong{367}: 20-29.}
+\author{Cristian Pattaro}
 
 \seealso{
 \code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.cys}}
 }
-\keyword{ ~CKD-EPI }
-\keyword{ ~creatinine }
-\keyword{ ~cystatin }
+\keyword{ CKD-EPI }
+\keyword{ creatinine }
+\keyword{ cystatin }
