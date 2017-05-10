@@ -1,13 +1,13 @@
 Package: nephro
 Type: Package
-Title: Biostatistics Utilities for Nephrology
-Version: 1.1
-Date: 2015-01-31
+Title: Utilities for Nephrology
+Version: 1.2
+Date: 2017-05-05
 Author: Cristian Pattaro
 Maintainer: Cristian Pattaro <cristian.pattaro@eurac.edu>
-Description: Set of functions to estimate the Glomerular Filtration Rate (GFR) using different biomarkers and other phenotypes of interest for nephrology.
+Description: Set of functions to estimate renal function and other phenotypes of interest in nephrology based on different biomechimal traits. MDRD, CKD-EPI, and Virga equations are compared in Pattaro (2013) <doi:10.1159/000351043>, where the respective references are given. In addition, the software includes Stevens (2008) <doi:10.1053/j.ajkd.2007.11.018> and Cockroft (1976) <doi:10.1159/000180580> formulas.
 License: GPL (>= 3)
-Packaged: 2015-02-23 09:10:59 UTC; cpattaro
 NeedsCompilation: no
+Packaged: 2017-05-10 08:30:44 UTC; cpattaro
 Repository: CRAN
-Date/Publication: 2015-02-23 10:25:54
+Date/Publication: 2017-05-10 11:27:23 UTC

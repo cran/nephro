@@ -1,3 +1,9 @@
+2017-05-05 Cristian Pattaro <cristian.pattaro@eurac.edu>
+
+*CG() function: serious bug fixed: previous wrong formula: eGFR <- (140-age) * wt / 72 * creatinine; current fixed formula: 
+eGFR <- (140-age) * wt / (72 * creatinine); previous CG() results not valid - many thanks to João Sabino for uncovering the mistake!
+
+
 2015-01-31  Cristian Pattaro <cristian.pattaro@eurac.edu>
 
 * all functions: a serious bug on NA values has been fixed - many thanks to Max Plisckhe (Medical University of Vienna) who uncovered that!

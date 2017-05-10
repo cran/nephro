@@ -1,7 +1,8 @@
-6c277070900438b631acf6ac1004e4c4 *ChangeLog
-4b669674ec0b735dc41ba92ca7b08d7e *DESCRIPTION
+cb5bca028bc8401d591859a2a46c5a74 *ChangeLog
+8359cb0e451442d212510e5c5b6bc0b4 *DESCRIPTION
 df390c53434517b304ac5db487184641 *NAMESPACE
-53025c05887df3260b0390a7eb13b77f *R/nephro.R
+3924290b841b1f23e541a071793ece81 *R/nephro.R
+a1aa352b346fa5a9b33f990e4c8d1a9d *README
 6ecddbb1d2266a156aed76964d5b0d61 *man/CG.Rd
 5053ae7594b57c0ca0deac31dfa58553 *man/CKDEpi.creat.Rd
 d148b6ba59ee9957ba9255bc6dafda45 *man/CKDEpi.creat.cys.Rd
@@ -12,4 +13,4 @@ c0fb4de5f4c26e073b1ad37e13373f9b *man/Stevens.creat.cys.Rd
 718ee86c141b4b1813f253e59e9025bb *man/Stevens.cys1.Rd
 c3cf0ec345293c062ffee18a0c9955a7 *man/Stevens.cys2.Rd
 9720249ed435ad4b7e7734a4f9208305 *man/Virga.Rd
-6446faa8c888ca2d224bc6fbdba03d8b *man/nephro-package.Rd
+e9f6aec68060c4f28f04e6321824cc7a *man/nephro-package.Rd

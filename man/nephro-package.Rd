@@ -3,7 +3,7 @@
 \alias{nephro}
 \docType{package}
 \title{
-Biostatistics Utilities for Nephrology
+Biostatistics utilities for nephrology
 }
 \description{
 This package contains a set of tools for the estimation of renal function. Renal function is assessed by means of the Glomerular Filtration Rate (GFR) which can be estimated using different biomarkers. The most commonly used ones are serum or plasma creatinine and cystatin C. Included in this package are the following GFR estimating functions: the Modification of Diet in Renal Disease (MDRD) study equation based on four (\code{\link[nephro]{MDRD4}}) or six (\code{\link[nephro]{MDRD6}}) parameters (see Levey 1999, 2006); the CKD-Epi equations for creatinine (\code{\link[nephro]{CKDEpi.creat}}), cystatin C (\code{\link[nephro]{CKDEpi.cys}}), and a combination of creatinine and cystatin C (\code{\link[nephro]{CKDEpi.creat.cys}}) (see Inker 2012); the three equations proposed by Stevens 2008 based on cystatin C only (\code{\link[nephro]{Stevens.cys1}}), age- and sex-weighted cystatin C (\code{\link[nephro]{Stevens.cys2}}), and a combination of cystatin C and creatinine (\code{\link[nephro]{Stevens.creat.cys}}); the classic Cockroft and Gault 1976 equation for creatinine clearance estimation (\code{\link[nephro]{CG}}); and the recent equation by Virga (2007) (\code{\link[nephro]{Virga}}). A comparative description of several functions included in the package can be found in Pattaro (2013). An extensive literature does exist that compares the methods described.
