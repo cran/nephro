@@ -22,7 +22,7 @@ Cristian Pattaro
 }
 
 \seealso{
-\code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}
+\code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi.creat.rf}}, \code{\link{CKDEpi.creat.cys.rf}}
 }
 \keyword{ CKD-EPI }
 \keyword{ creatinine }

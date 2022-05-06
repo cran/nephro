@@ -8,7 +8,7 @@ GFR is estimated with the CKD-EPI equation for cystatin C proposed by Inker et a
 CKDEpi.cys(cystatin, sex, age)
 }
 \arguments{
-  \item{cystatin}{Numeric vector with serum or plasma cystatin C values in mg/dl}
+  \item{cystatin}{Numeric vector with serum or plasma cystatin C values in mg/l}
   \item{sex}{Numeric vector with 0 for females and 1 for males}
   \item{age}{Numeric vector with age in years}
 }
@@ -23,7 +23,7 @@ Cristian Pattaro
 }
 
 \seealso{
-\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}
+\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.creat.rf}}, \code{\link{CKDEpi.creat.cys.rf}}
 }
 \keyword{ GFR }
 \keyword{ CKD-EPI }

@@ -7,7 +7,7 @@ GFR estimation using the 3rd formula proposed by Stevens et al. (Am J Kidney Dis
 \usage{Stevens.creat.cys(creatinine, cystatin, sex, age, ethnicity)}
 \arguments{
   \item{creatinine}{Numeric vector with serum or plasma creatinine values in mg/dl}
-  \item{cystatin}{Numeric vector with serum or plasma cystatin C values in mg/dl}
+  \item{cystatin}{Numeric vector with serum or plasma cystatin C values in mg/l}
   \item{sex}{Numeric vector with 0 for females and 1 for males}
   \item{age}{Numeric vector with age in years}
   \item{ethnicity}{Numeric vector with 0 for non-Black and 1 for Black individuals}
