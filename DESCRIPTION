@@ -1,13 +1,13 @@
 Package: nephro
 Type: Package
 Title: Utilities for Nephrology
-Version: 1.3
-Date: 2022-05-01
-Author: Cristian Pattaro, Ryosuke Fujii
+Version: 1.4
+Date: 2023-10-10
+Author: Cristian Pattaro, Ryosuke Fujii, Janina Herold
 Maintainer: Cristian Pattaro <cristian.pattaro@eurac.edu>
-Description: Set of functions to estimate kidney function and other phenotypes of interest in nephrology based on different biomechimal traits. MDRD, CKD-EPI, and Virga equations are compared in Pattaro (2013) <doi:10.1159/000351043>, where the respective references are given. In addition, the software includes Stevens (2008) <doi:10.1053/j.ajkd.2007.11.018> and Cockroft (1976) <doi:10.1159/000180580> formulas. The race-free CKD-EPI equations (2021) <doi:10.1056/NEJMoa2102953> are also implemented from ver.1.3. 
+Description: Set of functions to estimate kidney function and other phenotypes of interest in nephrology based on different biomechimal traits. 
 License: GPL (>= 3)
 NeedsCompilation: no
-Packaged: 2022-05-06 13:02:58 UTC; cpattaro
+Packaged: 2023-10-16 21:23:08 UTC; cpattaro
 Repository: CRAN
-Date/Publication: 2022-05-06 13:30:02 UTC
+Date/Publication: 2023-10-16 21:40:02 UTC

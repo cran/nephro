@@ -6,23 +6,34 @@
 Biostatistics utilities for nephrology
 }
 \description{
-This package contains a set of tools for the estimation of kidney function. Kidney function is assessed by means of the Glomerular Filtration Rate (GFR), 
-which can be estimated using different biomarkers. The most commonly used ones are serum or plasma creatinine and cystatin C. 
-Included in this package are the following GFR estimating functions: the Modification of Diet in Renal Disease (MDRD) study equation based on four (\code{\link[nephro]{MDRD4}}) or six (\code{\link[nephro]{MDRD6}}) parameters (see Levey 1999, 2006); the CKD-Epi equations for creatinine (\code{\link[nephro]{CKDEpi.creat}}, \code{\link[nephro]{CKDEpi.creat.rf}}), cystatin C (\code{\link[nephro]{CKDEpi.cys}}), and a combination of creatinine and cystatin C (\code{\link[nephro]{CKDEpi.creat.cys}}, \code{\link[nephro]{CKDEpi.creat.cys.rf}}) (see Inker 2012 & Inker 2021); the three equations proposed by Stevens 2008 based on cystatin C only (\code{\link[nephro]{Stevens.cys1}}), age- and sex-weighted cystatin C (\code{\link[nephro]{Stevens.cys2}}), and a combination of cystatin C and creatinine (\code{\link[nephro]{Stevens.creat.cys}}); the classic Cockroft and Gault 1976 equation for creatinine clearance estimation (\code{\link[nephro]{CG}}); and the recent equation by Virga (2007) (\code{\link[nephro]{Virga}}). A comparative description of several functions included in the package can be found in Pattaro (2013). An extensive literature does exist that compares the methods described.
+This package contains a set of tools for the estimation of kidney function. Kidney function is assessed by means of the Glomerular Filtration Rate (GFR), which can be estimated using different biomarkers. The most commonly used ones are serum or plasma creatinine and cystatin C. 
+
+Included in the package are the following GFR estimating functions: 
+the Modification of Diet in Renal Disease (MDRD) study equations based on four (\code{\link[nephro]{MDRD4}}) or six (\code{\link[nephro]{MDRD6}}) parameters (Levey 1999; Levey 2006);
+the CKD-Epi equations for serum creatinine with the race coefficient (\code{\link[nephro]{CKDEpi.creat}}) and without the race coefficient (\code{\link[nephro]{CKDEpi_RF.creat}});
+the CKD-Epi equation for cystatin C (\code{\link[nephro]{CKDEpi.cys}}); the CKD-Epi equation for the combination of creatinine and cystatin C with (\code{\link[nephro]{CKDEpi.creat.cys}}) and without (\code{\link[nephro]{CKDEpi_RF.creat.cys}}) the race coefficient (Inker 2012; Inker 2021);
+the three equations proposed by Stevens 2008 based on cystatin C only (\code{\link[nephro]{Stevens.cys1}}), age- and sex-weighted cystatin C (\code{\link[nephro]{Stevens.cys2}}), and a combination of cystatin C and creatinine (\code{\link[nephro]{Stevens.creat.cys}});
+the classic Cockroft and Gault 1976 equation for creatinine clearance estimation (\code{\link[nephro]{CG}}); the equation by Virga (2007) (\code{\link[nephro]{Virga}});
+the race-free equations developed by the European Kidney Function Consortium (EKFC) including sex and age based on serum creatinine (\code{\link[nephro]{EKFC.creat}}) (Pottel 2021) and based on serum cystatin C with (\code{\link[nephro]{EKFC.cys}}) and without (\code{\link[nephro]{EKFC_SF.cys}}) the sex coefficient (Pottel 2023);
+the full age spectrum (FAS) equations using serum creatinine (\code{\link[nephro]{FAS.creat}}) (Pottel 2016), cystatin C (\code{\link[nephro]{FAS.cys}}), and their combination (\code{\link[nephro]{FAS.creat.cys}}) (Pottel 2017);
+the Schwartz bedside formula (\code{\link[nephro]{Schwartz.Bedside}}) (Schwartz 2009).
+
+A comparative description of several functions included in the initial version of the package can be found in Pattaro (2013). Extensive literature does exist that compares the methods described.
 }
+
 \details{
 \tabular{ll}{
-Package: \tab nephro\cr
+Package: \tab nephroext\cr
 Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2022-05-01\cr
+Version: \tab 1.4\cr
+Date: \tab 2023-10-10\cr
 License: \tab GPLv3\cr
 }
 }
 \author{
-Cristian Pattaro <cristian.pattaro@eurac.edu>, Ryosuke Fujii <ryosuke.fujii@eurac.edu> \cr
+Cristian Pattaro <cristian.pattaro@eurac.edu>, Ryosuke Fujii <ryosuke.fujii@eurac.edu>, Janina Herold <janina.herold@klinik.uni-regensburg.de>\cr
 
-Acknowledgements: Max Plischke (contributed examples and bug reporting)
+Acknowledgements: Max Plischke, Joao Sabino, Xiao Jiang for bug reporting; Alexander Tolios, Thomas Winkler for input on the software package; Andrew Srisuwananukorn for contributing scripts; the 'nephro' user community for continuous feedback.
 }
 
 \references{
@@ -37,6 +48,11 @@ Acknowledgements: Max Plischke (contributed examples and bug reporting)
   - Levey AS, \emph{et al}. Using standardized serum creatinine values in the modification of diet in renal disease study equation for estimating glomerular filtration rate. \emph{Ann Intern Med.} 2006; \strong{145}: 247-54. \cr
   - Stevens LA, \emph{et al}. Estimating GFR using serum cystatin C alone and in combination with serum creatinine: a pooled analysis of 3,418 individuals with CKD. \emph{Am J Kidney Dis} 2008; \strong{51}: 395-406. \cr
   - Virga G, \emph{et al}. A new equation for estimating renal function using age, body weight and serum creatinine. \emph{Nephron Clin Pract} 2007; \strong{105}: c43-53.\cr 
+  - Pottel H, \emph{et al}. Development and Validation of a Modified Full Age Spectrum Creatinine-Based Equation to Estimate Glomerular Filtration Rate: A Cross-sectional Analysis of Pooled Data. \emph{Ann Intern Med} 2021; \strong{174}: 183-191.\cr
+  - Pottel H, \emph{et al}. Cystatin C-Based Equation to Estimate GFR without the Inclusion of Race and Sex. \emph{N Engl J Med} 2023; \strong{388}: 333-343.\cr
+  - Pottel H, \emph{et al}. An estimated glomerular filtration rate equation for the full age spectrum. \emph{Nephrol Dial Transplant} 2016; \strong{31}:798-806.\cr
+  - Pottel H, \emph{et al}. Estimating glomerular filtration rate for the full age spectrum from serum creatinine and cystatin C \emph{Nephrol Dial Transplant} 2017; \strong{32}: 497-507.\cr
+  - Schwartz GJ, \emph{et al}. New equations to estimate GFR in children with CKD. \emph{J Am Soc Nephrol} 2009; \strong{20}:629-637.\cr
 
   On IDMS calibration:\cr
   - Levey AS, \emph{et al}. Expressing the Modification of Diet in Renal Disease Study equation for estimating glomerular filtration rate with standardized serum creatinine values. \emph{Clin Chem} 2007; \strong{53}:766-72.\cr
@@ -48,6 +64,8 @@ Acknowledgements: Max Plischke (contributed examples and bug reporting)
 \concept{kidney function}
 \concept{GFR}
 \concept{CKD-EPI}
+\concept{FAS}
+\concept{EKFC}
 \concept{MDRD}
 \concept{creatinine}
 \concept{cystatin}
@@ -66,10 +84,10 @@ wt <- c(70, 80, 60, 55, 87, 71)
 eGFR <- data.frame(creat, cyst)
 eGFR$MDRD4 <- MDRD4(creat, sex, age, ethn, 'IDMS')
 eGFR$CKDEpi.creat <- CKDEpi.creat(creat, sex, age, ethn) 
-eGFR$CKDEpi.creat.rf <- CKDEpi.creat.rf(creat, sex, age)
+eGFR$CKDEpi_RF.creat <- CKDEpi_RF.creat(creat, sex, age)
 eGFR$CKDEpi.cys <- CKDEpi.cys(cyst, sex, age)
 eGFR$CKDEpi.creat.cys <- CKDEpi.creat.cys(creat, cyst, sex, age, ethn)
-eGFR$CKDEpi.creat.cys.rf <- CKDEpi.creat.cys.rf(creat, cyst, sex, age)
+eGFR$CKDEpi_RF.creat.cys <- CKDEpi_RF.creat.cys(creat, cyst, sex, age)
 eGFR$Stevens.cys1 <- Stevens.cys1(cyst)
 eGFR$Stevens.cys2 <- Stevens.cys2(cyst, sex, age, ethn)
 eGFR$Stevens.creat.cys <- Stevens.creat.cys(creat, cyst, sex, age, ethn)

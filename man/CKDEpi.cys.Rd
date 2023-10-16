@@ -23,7 +23,7 @@ Cristian Pattaro
 }
 
 \seealso{
-\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.creat.rf}}, \code{\link{CKDEpi.creat.cys.rf}}
+\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}
 }
 \keyword{ GFR }
 \keyword{ CKD-EPI }

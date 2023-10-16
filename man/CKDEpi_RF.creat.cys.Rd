@@ -1,13 +1,13 @@
-\name{CKDEpi.creat.cys.rf}
-\alias{CKDEpi.creat.cys.rf}
+\name{CKDEpi_RF.creat.cys}
+\alias{CKDEpi_RF.creat.cys}
 \title{
-CKD-EPI equation for serum creatinine and cystatin C without race coefficient
+Race-free CKD-EPI equation for serum creatinine and cystatin C
 }
 \description{
-CKD-EPI equation to estimate GFR based on a combination of creatinine and cystatin C without race coefficient
+CKD-EPI equation to estimate GFR based on a combination of creatinine and cystatin C without the ethnicity coefficient
 }
 \usage{
-CKDEpi.creat.cys.rf(creatinine, cystatin, sex, age)
+CKDEpi_RF.creat.cys(creatinine, cystatin, sex, age)
 }
 \arguments{
   \item{creatinine}{Numeric vector with serum or plasma creatinine values in mg/dl}
@@ -26,7 +26,7 @@ Ryosuke Fujii
 }
 
 \seealso{
-\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi.creat.rf}}
+\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi_RF.creat}}
 }
 \keyword{ CKD-EPI }
 \keyword{ creatinine }
