@@ -769,3 +769,131 @@ Schwartz.Bedside <- function(creatinine, ht, age)
     } else
       stop ("Some variables are not defined") 
   }
+
+CKiD.U25.cystatin <- function(cystatin, age, sex)
+# CKiD U25 calculation for Cystatin C only
+# Requires Cystatin C level, age, sex
+{
+  if (!is.null(age) & !is.null(cystatin) & !is.null(sex))
+  {
+    cystatin <- as.numeric(cystatin)
+    age <- as.numeric(age)
+    sex <- as.numeric(sex) # 0 = male, 1 = female
+    n <- length(cystatin)
+
+    if (length(age) == n)
+    {
+      if ( (min(age)<1) | (max(age)>25)) cat("\nWarning: there are age values <1 or >25 years; for those children, eGFR values might be invalid\n")
+
+      # Identify missing data and store the index
+      idx <- c(1:n)[is.na(cystatin)]
+
+      # Replace missing data with fake data to avoid problems with formulas
+      cystatin[is.na(cystatin)] <- 10
+
+      coeff <- if(age < 12){
+        if(sex == 1) 79.9*1.004 ^ (age-12)
+        else 87.2*1.011 ^ (age-15)
+      } else if(age < 15) {
+        if(sex == 1) 79.9*0.974 ^ (age-12)
+        else 87.2*1.011 ^ (age-15)
+      } else if (age < 18) {
+        if(sex == 1) 79.9*0.974 ^ (age-12)
+        else 87.2*0.960 ^ (age-15)
+      } else {
+        if(sex == 1) 77.1
+        else 68.3
+      }
+
+      eGFR <- coeff / cystatin
+
+      # Restore missing data at the indexed positions
+      eGFR[idx] <- NA
+
+      # Output
+      round(eGFR, 1)
+
+    } else
+      stop ("Different number of observations between variables")
+  } else
+    stop ("Some variables are not defined")
+}
+
+CKiD.U25.creatinine <- function(creatinine, age, ht, sex)
+  # CKiD U25 calculation for creatinine only
+  # Requires creatinine, age, ht (in cm), sex
+{
+  if (!is.null(creatinine) & !is.null(ht) & !is.null(age) & !is.null(sex))
+  {
+    creatinine <- as.numeric(creatinine)
+    ht <- as.numeric(ht)
+    age <- as.numeric(age)
+    sex <- as.numeric(sex) # 0 = male, 1 = female
+    n <- length(creatinine)
+
+    if (length(ht) == n)
+    {
+      if ( (min(age)<1) | (max(age)>25)) cat("\nWarning: there are age values <1 or >25 years; for those children, eGFR values might be invalid\n")
+
+      # Identify missing data and store the index
+      idx <- c(1:n)[is.na(creatinine) |  is.na(ht)]
+
+      # Replace missing data with fake data to avoid problems with formulas
+      creatinine[is.na(creatinine)] <- 10
+      ht[is.na(ht)] <- 10
+
+      coeff <- if(age < 12){
+        if(sex == 1) 36.1*1.008 ^ (age - 12)
+        else 39*1.008 ^ (age - 12)
+      } else if (age < 18) {
+        if(sex == 1) 36.1*1.023 ^ (age - 12)
+        else 39*1.045 ^ (age - 12)
+      } else {
+        if(sex == 1) 41.4
+        else 50.8
+      }
+
+      eGFR <- coeff * (ht / 100) / creatinine
+
+      # Restore missing data at the indexed positions
+      eGFR[idx] <- NA
+
+      # Output
+      round(eGFR, 1)
+
+    } else
+      stop ("Different number of observations between variables")
+  } else
+    stop ("Some variables are not defined")
+}
+
+CKiD.U25.combined <- function(creatinine, cystatin, age, ht, sex, verbose = FALSE)
+  # CKiD U25 calculation for both creatinine and Cystatin C
+  # Requires serum Cr, Cystatin C level, age, ht (in cm), sex
+{
+  if (!is.null(creatinine) & !is.null(ht) & !is.null(age) &
+      !is.null(cystatin) & !is.null(sex))
+  {
+    creatinine <- as.numeric(creatinine)
+    cystatin <- as.numeric(cystatin)
+    ht <- as.numeric(ht)
+    age <- as.numeric(age)
+    sex <- as.numeric(sex) # 0 = male, 1 = female
+
+    # Return the average of the two other calculations
+    eGFRU25.cr <- CKiD.U25.creatinine(creatinine = creatinine, age = age,
+                                      ht = ht, sex = sex)
+    eGFRU25.cys <-  CKiD.U25.cystatin(cystatin = cystatin, age = age, sex = sex)
+    sGFRU25.avg <- (eGFRU25.cys + eGFRU25.cr) / 2
+
+    ## Determine if we should return all the component parts or just the result
+    ## of the combined calculation
+    if(verbose) {
+      return(round(cbind(eGFRU25.cr, eGFRU25.cys, sGFRU25.avg),1))
+    } else {
+      return(round(sGFRU25.avg, 1))
+    }
+
+  } else
+    stop ("Some variables are not defined")
+}
