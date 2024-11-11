@@ -55,7 +55,7 @@ CKiD.U25.combined(creatinine = 0.8, cystatin = 1.2, age = 9.5, sex = 1, ht = 132
     [1,]       58.4        65.9        62.2
 
 [Pull requests have been
-filed](https://github.com/cran/nephro/pulls "Current status of CKiD U25 pull request")
+filed](https://github.com/cran/nephro/pull/1 "Current status of CKiD U25 pull request")
 to merge these equations into the main
 [**nephro**](https://cran.r-project.org/web/packages/nephro/index.html "CRAN repository for original nephro package, currently v1.4")
 package
