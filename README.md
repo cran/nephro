@@ -50,7 +50,7 @@ CKiD.U25.creatinine(creatinine = 0.8, age = 9.5, sex = 0, ht = 132)
 CKiD.U25.combined(creatinine = 0.8, cystatin = 1.2, age = 9.5, sex = 0, ht = 132, verbose = TRUE)
 ```
 
-         eGFRU25.cr eGFRU25.cys sGFRU25.avg
+         eGFRU25.cr eGFRU25.cys eGFRU25.avg
     [1,]       63.1        68.4        65.8
 
 Pull requests have been filed to merge these equations into the main
