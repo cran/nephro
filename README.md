@@ -1,11 +1,12 @@
 # Nephro with CKiD U25 equations
-Xavier Gaeta MD, PhD
+**Xavier Gaeta MD, PhD**
 
 ## Nephro - CKiD U25
 
-This is fork of the R **nephro** package that’s hosted on CRAN.org which
-includes functions to calculate pediatric eGFR based on the following
-publication:
+This is a fork of the R
+[**nephro**](https://cran.r-project.org/web/packages/nephro/index.html "CRAN repository for original nephro package, currently v1.4")
+package that’s hosted on CRAN.org which includes functions to calculate
+pediatric eGFR based on the following publication:
 
 Pierce CB, Muñoz A, Ng DK, Warady BA, Furth SL, Schwartz GJ. **Age- and
 sex-dependent clinical equations to estimate glomerular filtration rates
@@ -53,5 +54,8 @@ CKiD.U25.combined(creatinine = 0.8, cystatin = 1.2, age = 9.5, sex = 0, ht = 132
          eGFRU25.cr eGFRU25.cys eGFRU25.avg
     [1,]       63.1        68.4        65.8
 
-Pull requests have been filed to merge these equations into the main
-**nephro** package
+[Pull requests have been
+filed](https://github.com/cran/nephro/pulls "Current status of CKiD U25 pull request")
+to merge these equations into the main
+[**nephro**](https://cran.r-project.org/web/packages/nephro/index.html "CRAN repository for original nephro package, currently v1.4")
+package
