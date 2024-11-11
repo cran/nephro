@@ -31,28 +31,28 @@ library(nephro)
 ## Using the functions
 
 These new equations follow the same style as the rest of the package,
-including sex as a binary variable with 0 for female and 1 for male.
+including sex as a binary variable with 0 for male and 1 for female.
 Height is provided in cm. They currently use US based equations. Outputs
 are in mL/min/1.73m<sup>2</sup>.
 
 ``` r
-CKiD.U25.cystatin(cystatin = 1.2, age = 9.5, sex = 0)
+CKiD.U25.cystatin(cystatin = 1.2, age = 9.5, sex = 1)
 ```
 
-    [1] 68.4
+    [1] 65.9
 
 ``` r
-CKiD.U25.creatinine(creatinine = 0.8, age = 9.5, sex = 0, ht = 132)
+CKiD.U25.creatinine(creatinine = 0.8, age = 9.5, sex = 1, ht = 132)
 ```
 
-    [1] 63.1
+    [1] 58.4
 
 ``` r
-CKiD.U25.combined(creatinine = 0.8, cystatin = 1.2, age = 9.5, sex = 0, ht = 132, verbose = TRUE)
+CKiD.U25.combined(creatinine = 0.8, cystatin = 1.2, age = 9.5, sex = 1, ht = 132, verbose = TRUE)
 ```
 
          eGFRU25.cr eGFRU25.cys eGFRU25.avg
-    [1,]       63.1        68.4        65.8
+    [1,]       58.4        65.9        62.2
 
 [Pull requests have been
 filed](https://github.com/cran/nephro/pulls "Current status of CKiD U25 pull request")
