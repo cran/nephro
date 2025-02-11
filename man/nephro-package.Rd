@@ -6,27 +6,33 @@
 Biostatistics utilities for nephrology
 }
 \description{
-This package contains a set of tools for the estimation of kidney function. Kidney function is assessed by means of the Glomerular Filtration Rate (GFR), which can be estimated using different biomarkers. The most commonly used ones are serum or plasma creatinine and cystatin C. 
+Set of tools for the estimation of kidney function and related traits. 
 
-Included in the package are the following GFR estimating functions: 
+Included are the following glomerular filtration rate (GFR) estimating functions: 
 the Modification of Diet in Renal Disease (MDRD) study equations based on four (\code{\link[nephro]{MDRD4}}) or six (\code{\link[nephro]{MDRD6}}) parameters (Levey 1999; Levey 2006);
-the CKD-Epi equations for serum creatinine with the race coefficient (\code{\link[nephro]{CKDEpi.creat}}) and without the race coefficient (\code{\link[nephro]{CKDEpi_RF.creat}});
-the CKD-Epi equation for cystatin C (\code{\link[nephro]{CKDEpi.cys}}); the CKD-Epi equation for the combination of creatinine and cystatin C with (\code{\link[nephro]{CKDEpi.creat.cys}}) and without (\code{\link[nephro]{CKDEpi_RF.creat.cys}}) the race coefficient (Inker 2012; Inker 2021);
+the CKD-Epi equations for serum creatinine with the race coefficient (\code{\link[nephro]{CKDEpi.creat}}) and without the race coefficient (\code{\link[nephro]{CKDEpi2021.creat}});
+the CKD-Epi equation for cystatin C (\code{\link[nephro]{CKDEpi.cys}}); the CKD-Epi equation for the combination of creatinine and cystatin C with (\code{\link[nephro]{CKDEpi.creat.cys}}) and without (\code{\link[nephro]{CKDEpi2021.creat.cys}}) the race coefficient (Inker 2012; Inker 2021);
 the three equations proposed by Stevens 2008 based on cystatin C only (\code{\link[nephro]{Stevens.cys1}}), age- and sex-weighted cystatin C (\code{\link[nephro]{Stevens.cys2}}), and a combination of cystatin C and creatinine (\code{\link[nephro]{Stevens.creat.cys}});
 the classic Cockroft and Gault 1976 equation for creatinine clearance estimation (\code{\link[nephro]{CG}}); the equation by Virga (2007) (\code{\link[nephro]{Virga}});
 the race-free equations developed by the European Kidney Function Consortium (EKFC) including sex and age based on serum creatinine (\code{\link[nephro]{EKFC.creat}}) (Pottel 2021) and based on serum cystatin C with (\code{\link[nephro]{EKFC.cys}}) and without (\code{\link[nephro]{EKFC_SF.cys}}) the sex coefficient (Pottel 2023);
 the full age spectrum (FAS) equations using serum creatinine (\code{\link[nephro]{FAS.creat}}) (Pottel 2016), cystatin C (\code{\link[nephro]{FAS.cys}}), and their combination (\code{\link[nephro]{FAS.creat.cys}}) (Pottel 2017);
 the Schwartz bedside formula (\code{\link[nephro]{Schwartz.Bedside}}) (Schwartz 2009).
 
-A comparative description of several functions included in the initial version of the package can be found in Pattaro (2013). Extensive literature does exist that compares the methods described.
+A comparative description of several GFR-estimating functions included in the initial version of the package can be found in Pattaro (2013). Extensive literature does exist that compares the methods described.
+
+Additional serum biomarkers are the blood urea nitrogen (BUN)-to-creatinine ratio (\code{\link[nephro]{BCR}} and the urea-to-creatinine ratio \code{\link[nephro]{UCR}}.
+
+Urine biomarkers included are the albumin-to-creatinine ratio \code{\link[nephro]{UACR}} and the protein-to-creatinine ratio \code{\link[nephro]{UPCR}}
+
+Some unit conversion functions are provided to facilitate operations.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab nephroext\cr
 Type: \tab Package\cr
-Version: \tab 1.4\cr
-Date: \tab 2023-10-10\cr
+Version: \tab 1.5\cr
+Date: \tab 2025-30-01\cr
 License: \tab GPLv3\cr
 }
 }
@@ -69,7 +75,10 @@ Acknowledgements: Max Plischke, Joao Sabino, Xiao Jiang for bug reporting; Alexa
 \concept{MDRD}
 \concept{creatinine}
 \concept{cystatin}
-
+\concept{UACR}
+\concept{albuminuria}
+\concept{proteinuria}
+\concept{azotaemia}
 
 \examples{
 # Comparison between different equations
@@ -84,10 +93,10 @@ wt <- c(70, 80, 60, 55, 87, 71)
 eGFR <- data.frame(creat, cyst)
 eGFR$MDRD4 <- MDRD4(creat, sex, age, ethn, 'IDMS')
 eGFR$CKDEpi.creat <- CKDEpi.creat(creat, sex, age, ethn) 
-eGFR$CKDEpi_RF.creat <- CKDEpi_RF.creat(creat, sex, age)
+eGFR$CKDEpi2021.creat <- CKDEpi2021.creat(creat, sex, age)
 eGFR$CKDEpi.cys <- CKDEpi.cys(cyst, sex, age)
 eGFR$CKDEpi.creat.cys <- CKDEpi.creat.cys(creat, cyst, sex, age, ethn)
-eGFR$CKDEpi_RF.creat.cys <- CKDEpi_RF.creat.cys(creat, cyst, sex, age)
+eGFR$CKDEpi2021.creat.cys <- CKDEpi2021.creat.cys(creat, cyst, sex, age)
 eGFR$Stevens.cys1 <- Stevens.cys1(cyst)
 eGFR$Stevens.cys2 <- Stevens.cys2(cyst, sex, age, ethn)
 eGFR$Stevens.creat.cys <- Stevens.creat.cys(creat, cyst, sex, age, ethn)

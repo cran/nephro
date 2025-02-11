@@ -1,11 +1,11 @@
-\name{CKDEpi_RF.creat}
-\alias{CKDEpi_RF.creat}
+\name{CKDEpi2021.creat}
+\alias{CKDEpi2021.creat}
 \title{Race-free CKD-EPI equation for serum creatinine
 }
 \description{
 GFR is estimated with the CKD-EPI Study equation based on serum creatinine without the ethnicity coefficient.
 }
-\usage{CKDEpi_RF.creat(creatinine, sex, age)}
+\usage{CKDEpi2021.creat(creatinine, sex, age)}
 \arguments{
   \item{creatinine}{Numeric vector with serum or plasma creatinine values in mg/dl}
   \item{sex}{Numeric vector with 0 for females and 1 for males}
@@ -22,7 +22,7 @@ Ryosuke Fujii
 }
 
 \seealso{
-\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi_RF.creat.cys}}
+\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.creat.cys}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi2021.creat.cys}}
 }
 \keyword{ CKD-EPI }
 \keyword{ creatinine }

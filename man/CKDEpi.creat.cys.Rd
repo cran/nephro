@@ -24,7 +24,7 @@ A numeric vector with eGFR values in ml/min/1.73 \eqn{m^2}.
 \author{Cristian Pattaro}
 
 \seealso{
-\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi_RF.creat.cys}}
+\code{\link{CKDEpi.creat}}, \code{\link{CKDEpi.cys}}, \code{\link{CKDEpi2021.creat.cys}}
 }
 \keyword{ CKD-EPI }
 \keyword{ creatinine }
